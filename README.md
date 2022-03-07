@@ -29,33 +29,35 @@ scenario. Coding is not necessary for this question.
 
 ### Part 1
 
-The answer to the first part is the Typescript code in this repo, which you can run by doing:
+The answer to the first part is the Typescript code in this repo, which you can run via:
 
 ```bash
 npm install
 npm run trees
 ```
 
+Note that running this might take a long time, perhaps an hour or so.
+
 In order to answer this question, the following assumptions were made:
 
-1) searching for "747 Howard St, San Francisco, CA 94103" in Google Maps shows the Moscone Center
+1) Searching for "747 Howard St, San Francisco, CA 94103" in Google Maps shows the Moscone Center.
 
-2) the question asks for "5 block radius" around that location, so this uses the rectangular "block"
-   of the Moscone Center as a definition of 1 block
+2) The question asks for "5 block radius" around that location, so this uses the rectangular "block"
+   of the Moscone Center as a definition of 1 block.
    
-3) drew out a rough circle and picked a point on 9th Street that was 5 blocks away, as shown below:
+3) Drew out a rough circle and picked a point on 9th Street that was 5 blocks away, as shown below:
 
 ![747 Howard Street, circle with a radius of 5 blocks](./google_maps_Howard_circle_radius.png)
 
-4) this arbitary point has a latitude and longitude of (37.7746156090338,-122.41269931600299),
-   according to Google Maps
+4) This arbitary point has a latitude and longitude of (37.7746156090338,-122.41269931600299),
+   according to Google Maps.
 
-5) the radius is calculated by measuring the distance between that point mentioned above and the
-   Moscone Center point, as per Google Maps
+5) Radius is calculated by measuring the distance between that point mentioned above and the
+   Moscone Center point, as per Google Maps.
 
-6) finally, the SF Tree dataset contains a list of trees with both latitude and longitude, so
+6) Finally, the SF Tree dataset contains a list of trees with both latitude and longitude, so
    calculating the distance between the Moscone Center and the tree in question is done; if the
-   distance between that tree is smaller than the radius, then it is within the circle
+   distance between that tree is smaller than the radius, then it is within the circle.
 
 ### Part 2
 
@@ -79,4 +81,4 @@ The answer to the second part can be something along the lines:
    both AWS and GCP support this or have features that make this possible.
 
 5) (Optional) If need be, can store this count value or log a list of trees, on the periodic
-   basis desire, into a GCS or S3 bucket to store the output.
+   basis desired, into a GCS or S3 bucket to store the output.
